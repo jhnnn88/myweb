@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>비전고 방학 자율학습 출석</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>출석 체크</h1>
+      <form id="attendance-form">
+        <label for="age">학년:</label>
+        <select id="age" name="age" required>
+          <option value="" disabled selected>학년 선택</option>
+          <option value="1">1학년</option>
+          <option value="2">2학년</option>
+          <option value="3">3학년</option>
+        </select>
+        <label for="class">반:</label>
+        <select id="class" name="class" required>
+          <option value="" disabled selected>반 선택</option>
+          <option value="1">1반</option>
+          <option value="2">2반</option>
+          <option value="3">3반</option>
+          <option value="4">4반</option>
+          <option value="5">5반</option>
+          <option value="6">6반</option>
+          <option value="7">7반</option>
+          <option value="8">8반</option>
+          <option value="9">9반</option>
+          <option value="10">10반</option>
+        </select>
+        <label for="number">번호:</label>
+        <select id="number" name="number" required>
+          <option value="" disabled selected>번호 선택</option>
+        </select>
+        <label for="name">이름:</label>
+        <input type="text" id="name" name="name" required />
+        <button type="submit">출석하기</button>
+      </form>
+      <h2>출석 명단</h2>
+      <ul id="attendance-list"></ul>
+      <button id="download-btn" style="display: none">엑셀 다운로드</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/xlsx@0.17.0/dist/xlsx.full.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
